@@ -1424,7 +1424,7 @@ __metadata:
     chai-subset: "npm:^1.6.0"
     colors: "npm:^1.4.0"
     dotenv: "npm:^17.4.2"
-    electron: "npm:29.4.3"
+    electron: "npm:40.2.1"
     electron-mocha: "npm:^12.1.0"
     get-func-name: "npm:^3.0.0"
     mocha: "npm:^11.0.0"
@@ -1533,12 +1533,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.9.0":
-  version: 20.14.11
-  resolution: "@types/node@npm:20.14.11"
+"@types/node@npm:^24.9.0":
+  version: 24.12.3
+  resolution: "@types/node@npm:24.12.3"
   dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10c0/5306becc0ff41d81b1e31524bd376e958d0741d1ce892dffd586b9ae0cb6553c62b0d62abd16da8bea6b9a2c17572d360450535d7c073794b0cef9cb4e39691e
+    undici-types: "npm:~7.16.0"
+  checksum: 10c0/e9db4194a0043c07e8c84c9e3ad19e4a216c708818de75ecfca858edb30d4f9f7ef1cb854959af552896eaf69ff79ea3d6e63157a6d37b0e1b809fac1c538e55
   languageName: node
   linkType: hard
 
@@ -2315,16 +2315,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:29.4.3":
-  version: 29.4.3
-  resolution: "electron@npm:29.4.3"
+"electron@npm:40.2.1":
+  version: 40.2.1
+  resolution: "electron@npm:40.2.1"
   dependencies:
     "@electron/get": "npm:^2.0.0"
-    "@types/node": "npm:^20.9.0"
+    "@types/node": "npm:^24.9.0"
     extract-zip: "npm:^2.0.1"
   bin:
     electron: cli.js
-  checksum: 10c0/4ec34da40e475854accdf73c6aef9ebe71664fee123486c1decc9fbe9450ed2553904d1943aa72666fb65eacbe4d86c5d487676c5f2f6233e5baa5f27349a7b7
+  checksum: 10c0/2964ba273a8e880a2c6a27dcd553a13d0d3c5af8b8bda510999034fbe52326ed181dc7edc803923bc0fac4aee5e7f5edf0bf8dca941aa7e20389f05d2bc44376
   languageName: node
   linkType: hard
 
@@ -4258,6 +4258,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 10c0/bb673d7876c2d411b6eb6c560e0c571eef4a01c1c19925175d16e3a30c4c428181fb8d7ae802a261f283e4166a0ac435e2f505743aa9e45d893f9a3df017b501
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~7.16.0":
+  version: 7.16.0
+  resolution: "undici-types@npm:7.16.0"
+  checksum: 10c0/3033e2f2b5c9f1504bdc5934646cb54e37ecaca0f9249c983f7b1fc2e87c6d18399ebb05dc7fd5419e02b2e915f734d872a65da2e3eeed1813951c427d33cc9a
   languageName: node
   linkType: hard
 
