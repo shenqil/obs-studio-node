@@ -1395,7 +1395,7 @@ VOID DisconnectAndReconnect(void)
 
 bool prepareTerminationPipe()
 {
-	LPTSTR lpszPipename = TEXT("\\\\.\\pipe\\exit-slobs-crash-handler");
+	LPCTSTR lpszPipename = TEXT("\\\\.\\pipe\\exit-slobs-crash-handler");
 
 	hEvents = CreateEvent(NULL, TRUE, TRUE, NULL);
 

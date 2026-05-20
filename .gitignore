@@ -3,6 +3,10 @@
 
 # Ignore Build directory
 build/
+build-arm64/
+build-x64/
+dist/
+Frameworks/
 logs/
 node_modules/
 distribute/

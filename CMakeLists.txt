@@ -4,7 +4,7 @@ if(POLICY CMP0177)
   cmake_policy(SET CMP0177 NEW)
 endif()
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 IF(CLANG_ANALYZE_CONFIG)
@@ -87,6 +87,9 @@ if(MSVC)
 	#ignore security warnings and deprecation warnings
 	add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 	add_definitions(-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS)
+	add_definitions(-D_SILENCE_ALL_CXX20_DEPRECATION_WARNINGS)
+	add_compile_options(/std:c++20)
+	add_compile_options(/Zc:__cplusplus)
 endif()
 
 if (WIN32)

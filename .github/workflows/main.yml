@@ -21,7 +21,7 @@ env:
   RELEASE_BUCKET: "obsstudionodes3.streamlabs.com"
   RuntimeURL: https://artifacts.electronjs.org/headers/dist
   RuntimeName: iojs
-  ElectronVersion: 29.4.3
+  ElectronVersion: 41.3.0
   SLGenerator: Visual Studio 17 2022
   SLDistributeDirectory: distribute
   SLFullDistributePath: "streamlabs-build.app/distribute" # The .app extension is required to run macOS tests correctly.
@@ -280,14 +280,8 @@ jobs:
           $version = $env:GITHUB_REF -replace 'refs/tags/', ''
           "VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
         shell: pwsh
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
       - name: Install dependencies
         run: |
-          corepack enable
-          corepack prepare yarn@4.14.1 --activate
           yarn install
           yarn add electron@${{env.ElectronVersion}} -D
       - name: Configure obs-studio-node
@@ -337,14 +331,8 @@ jobs:
           $version = $env:GITHUB_REF -replace 'refs/tags/', ''
           "VERSION=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
         shell: pwsh
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
       - name: Install dependencies
         run: |
-          corepack enable
-          corepack prepare yarn@4.14.1 --activate
           yarn install
           yarn add electron@${{env.ElectronVersion}} -D
       - name: 'Run tests'

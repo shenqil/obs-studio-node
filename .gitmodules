@@ -1,4 +1,3 @@
 [submodule "lib-streamlabs-ipc"]
 	path = lib-streamlabs-ipc
-	url = https://github.com/streamlabs/lib-streamlabs-ipc
-	branch = master
+	url = https://github.com/shenqil/lib-streamlabs-ipc

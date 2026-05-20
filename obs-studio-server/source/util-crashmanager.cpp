@@ -34,7 +34,6 @@
 #include <string_view>
 #include <thread>
 #include <vector>
-#include <filesystem>
 #include <random>
 #include <unordered_set>
 
@@ -444,9 +443,9 @@ std::wstring util::CrashManager::GetMemoryDumpName()
 	std::mt19937 rangen(std::random_device{}());
 
 	auto randomCharacter = [&]() {
-		auto crand = [&](char min, char max) {
-			std::uniform_int_distribution<char> distribution(min, max);
-			return distribution(rangen);
+		auto crand = [&](int min, int max) {
+			std::uniform_int_distribution<int> distribution(min, max);
+			return static_cast<char>(distribution(rangen));
 		};
 
 		// ascinum for simplicity
@@ -491,7 +490,7 @@ bool util::CrashManager::Initialize(char *path, const std::string &appdata)
 #ifdef ENABLE_CRASHREPORT
 	globalAppData_path = utf8_to_wstring(appdata);
 	std::ostringstream oss;
-	oss << appdata << std::filesystem::path::preferred_separator << "appState";
+	oss << appdata << (char)std::filesystem::path::preferred_separator << "appState";
 	appStateFile = oss.str();
 
 	annotations.insert({{"crashpad_status", "internal crash handler missed"}});
